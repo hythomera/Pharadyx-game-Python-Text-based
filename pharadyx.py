@@ -3,7 +3,7 @@ import time
 import keyboard
 import os
 
-def type_text(text, delay=0.0030):
+def type_text(text, delay=0.1):
     lines = text.split('\n')
     for line in lines:
         for i, char in enumerate(line):
@@ -41,8 +41,7 @@ class Game:
     @staticmethod
     def start_game(player_points):
         player_points = 0
-        # Add your type_text logic here
-
+        
 def start_game(player_points):
     type_text("Starting a new game...")
     
@@ -72,14 +71,13 @@ def start_game(player_points):
         "A hero who inspired many. A hero who touched many.",
         "A hero who gave many a gift.",
         "A gift that could change everything, and something."
-    ]
+        ]
 
     # Display the prologue using type_text for each line
     for line in text_list:
         type_text(line)
 
             
-    # Clear the screen
     os.system("cls")
 
     # Start Chapter I)
@@ -96,6 +94,7 @@ def menu():
         print(title)
         print("1. Start a new game")
         print("Q. Quit the game")
+        print("Press Space to navigate at your pace")
         user_input = input("> ")
         if user_input == "1":
             # Start a new game
